@@ -1,11 +1,13 @@
-console.log('lets play');
-let selectSound=new Audio('src/click.wav');
+//Game variable
+let youWinSound=new Audio('src/youWin.wav');
+let opponentWinSound=new Audio('src/opponentWin.wav');
 let you;
 let yourScore=0;
 let opponent;
 let opponentScore=0;
 let choices=['rock','paper','scissor'];
 
+//Game functions
 window.onload=()=>{
     for (let i = 0; i < 3; i++) {
         //<img id='rock' src='rock.png'>
@@ -17,7 +19,6 @@ window.onload=()=>{
     }
 }
 function selectChoice(){
-    selectSound.play();
     you=this.id;
     document.getElementById('your-choice').src ='src/'+ you +'.png';
 
@@ -29,27 +30,34 @@ function selectChoice(){
     if(you==opponent){
         yourScore+=1;
         opponentScore+=1;
+        youWinSound.play();
     }
     else{
         if(you=='rock' && opponent=='paper'){
             opponentScore+=1;
+            opponentWinSound.play();
         }
         else if(you=='paper' && opponent=='scissor'){
             opponentScore+=1;
+            opponentWinSound.play();
         }
         else if(you=='scissor' && opponent=='rock'){
             opponentScore+=1;
+            opponentWinSound.play();
         }
         else if(you=='paper' && opponent=='rock'){
             yourScore+=1;
+            youWinSound.play();
         }
         else if(you=='scissor' && opponent=='paper'){
             yourScore+=1;
+            youWinSound.play();
         }
         else if (you=='rock' && opponent=='scissor'){
             yourScore+=1;
+            youWinSound.play();
         }
     }
-    document.getElementById('your-score').innerText=yourScore;
-    document.getElementById('opponent-score').innerText=opponentScore;
+    document.getElementById('your-score').innerText='YOU : '+yourScore;
+    document.getElementById('opponent-score').innerText='PC : '+ opponentScore;
 }

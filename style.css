@@ -5,53 +5,75 @@
 body{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(248, 57, 57);
 }
 h1{
-    color: rgb(248, 57, 57);
     padding: 15px;
     font-size: 40px;
 }
 .board{
     display: flex;
-    border: 3px solid black;
-    padding-left: 25px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 15px;
 }
 #opponent-choice{
     width: 350px;
     height: 350px;
     margin: 20px 15px;
-    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 50%;
 }
 #opponent-score{
     width: 230px;
     height: 50px;
-    font-size: 50px;
-    text-align: center;
-    background-color: pink;
-    margin-top: 150px;
+    font-size: 38px;
 }
 #your-choice{
     width: 350px;
     height: 350px;
     margin: 20px 15px;
-    background-color: green;
+    border: 2px solid black;
+    border-radius: 50%;
 }
 #your-score{
     width: 230px;
     height: 50px;
-    font-size: 50px;
-    text-align: center;
-    background-color: pink;
-    margin-top: 150px;
+    font-size: 38px;
 }
 #choices{
     width: 360px;
     height: 120px;
-    border: black solid 3px;
     margin: 0px auto;
     margin-top: 10px;
 }
 #choices img{
     width: 120px;
     height: 120px;
+}
+
+@media screen and (max-width:440px) {
+    .board{
+        flex-direction: column;
+        border: 1px solid black;
+    }
+    #your-choice{
+        height: 180px;
+        width: 180px;
+        margin: 7px 10px;
+    }
+    #opponent-choice{
+        height: 180px;
+        width: 180px;
+        margin: 7px 10px;
+    }
+    h1{
+        font-size: 35px;
+        padding: 15px;
+    }
+    #choices img{
+        width: 80px;
+        height: 80px;
+    }
 }
