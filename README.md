@@ -7,8 +7,10 @@ It's a fun gaming web-app build to reduce your boredom.
 
 ## Build with
 HTML , CSS and Vanilla Javascript.
+
 ## Screenshots
 
+![Screenshot (549)](https://user-images.githubusercontent.com/109826222/213202835-6a36e7a0-926a-4cc2-a9b3-7034996bc563.png)
 
 
 
@@ -26,7 +28,6 @@ If you have fun playing this game, don't forget to give stars.
 Link - https://github.com/AishwaryaAtWork/Rock-Paper-Scissors
 ## Acknowledgements
 
- - [Bootstarp](https://getbootstrap.com/)
  - [Google Fonts](https://fonts.google.com/)
  - [Readme.so](https://readme.so/)
  - [Vercel](https://vercel.com/)
